@@ -102,7 +102,7 @@ for (let i = 0; i < GICollector.length; i++){
       if (outflag == true){
         solverbutton.style.display = "block"
       } else {
-        solverbutton.style.display = "block"
+        solverbutton.style.display = "none"
       }
   })
 }
@@ -145,6 +145,8 @@ function checkinput()
 // get modal
 var modal = document.getElementById("Modal");
 
+
+
 //var btn = document.getElementById("Solver-Button-Wrapper");
 
 var span = document.getElementsByClassName("close")[0];
@@ -169,8 +171,8 @@ function SolvesCube()
   ].join('');*/
 
   // Temp
-  cubeState = "ffdffdffdrrrrrrrrruufuufuufddbddbddblllllllllubbubbubb";
-  // 
+  //cubeState = "ffbffbffbrrrrrrrrruuduuduudddudduddulllllllllfbbfbbfbb";
+   
 
   let solveMoves = solver(cubeState).replace(/prime/g, '-');
   for (let i = 0; i < solveMoves.length; i++) 
@@ -207,9 +209,10 @@ window.onclick = function(event) {
 var currstep = 1
 
 
-function StepUp(n){
-  ShowStep(currstep+=n)
-}
+// function StepUp(n){
+//   console.log("")
+//   ShowStep(currstep+=n)
+// }
 
 //ffdffdffdrrrrrrrrruufuufuufddbddbddblllllllllubbubbubb
 
@@ -217,19 +220,25 @@ function StepUp(n){
 //   ShowStep(slideIndex += n);
 // }
 
+
+var MLeft = document.getElementById("mleft");
+var MRight = document.getElementById("mright");
+MLeft.onclick = function () { ShowStep(currstep-=1); }
+MRight.onclick = function () { ShowStep(currstep+=1); }
+
 function ShowStep(i) {
+
   let len = solveMovesArray.length
 
   var MGCollector = document.getElementsByClassName("Modal-Grid-Items");
-  var MLeft = document.getElementById("mleft");
-  var MRight = document.getElementById("mright");
+
   var MDisplay = document.getElementById("action");
   var MBgc = document.getElementById("mbgc");
   var text = document.getElementById("text");
 
   // Format i
-  if (i>=len){currstep=len; i=len;MRight.style.opacity=0}
-  else if (i<=1){currstep=1; i=1;MLeft.style.opacity=0}
+  if (i>=len){currstep=len; i=len;MRight.style.opacity=0; MLeft.style.opacity=1;}
+  else if (i<=1){currstep=1; i=1;MLeft.style.opacity=0; MRight.style.opacity=1;}
   else {MRight.style.opacity=1; MLeft.style.opacity=1}
   var MCode = solveMovesArray[i-1]
 
