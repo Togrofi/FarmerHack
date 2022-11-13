@@ -62,71 +62,15 @@ function myFunction() {
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
-// ------------------------------------
+// TL: New Tempinput
+var tempinput = [[[6,6,6],[6,5,6],[6,6,6]],[[6,6,6],[6,3,6],[6,6,6]],[[6,6,6],[6,2,6],[6,6,6]],[[6,6,6],[6,1,6],[6,6,6]],[[6,6,6],[6,0,6],[6,6,6]],[[6,6,6],[6,4,6],[6,6,6]]]
+// 
 
-/* // Slides
-var slideIndex = 1; 
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("SlideShow-FadingTitles")
-
-  if (n > slides.length)  {slideIndex=1}
-  else if (n < 1) {slideIndex=slides.length}
-
-  for (let i=0; i < slides.length; i++)
-  {
-    if (i == slideIndex-1){
-      slides[i].style.display = "block"
-    }
-    else {
-      slides[i].style.display = "none"
-    }
-  }
-}
-
-setInterval(function(){showSlides(slideIndex+=1)},5000);
-
-*/
-// Rublics Cube
-
-var tempinput = [[[0,5,0],[0,5,0],[0,5,0]],[[0,3,0],[0,3,0],[0,3,0]],[[0,2,0],[0,2,0],[0,2,0]],[[0,1,0],[0,1,0],[0,1,0]],[[0,0,0],[0,0,0],[0,0,0]],[[0,4,0],[0,4,0],[0,4,0]]]
+// var tempinput = [[[0,5,0],[0,5,0],[0,5,0]],[[0,3,0],[0,3,0],[0,3,0]],[[0,2,0],[0,2,0],[0,2,0]],[[0,1,0],[0,1,0],[0,1,0]],[[0,0,0],[0,0,0],[0,0,0]],[[0,4,0],[0,4,0],[0,4,0]]]
 var outflag = false
 var GICollector = document.getElementsByClassName("Grid-Item");
 var solverbutton = document.getElementById("Solver-Button-Wrapper");
-
-/*solverbutton.onclick = function () {
-  const solver = require('rubiks-cube-solver');
-  console.log(tempinput);
-  let cubeState = tempinput.join('').split(",").join("");
-  cubeState = cubeState.replace(/0/g,'l').replace(/1/g,'d').replace(/2/g,'u').replace(/3/g,'r').replace(/4/g,'b').replace(/5/g,'f');
-  console.log(cubeState);
-  cubeState = [
-    'flulfbddr', // front
-    'rudrruddl', // right
-    'dbbburrfb', // up
-    'llffdrubf', // down
-    'rludlubrf', // left
-    'lubfbfudl' // back
-  ].join('');
-  let solveMoves = solver(cubeState).replace(/prime/g, '-');
-  for (let i = 0; i < solveMoves.length; i++) {
-    if (solveMoves[i] == '2') {
-      solveMoves = solveMoves.substring(0, i) + " " + solveMoves[i-1] + solveMoves.substring(i+1);
-    }
-  }
-  let solveMovesArray = solveMoves.split(' ')
-
-  console.log(solveMoves);
-  console.log(solveMovesArray);
-  
-}*/
-
 
 solverbutton.style.display = "none";
 
@@ -158,27 +102,8 @@ for (let i = 0; i < GICollector.length; i++){
       if (outflag == true){
         solverbutton.style.display = "block"
       } else {
-        solverbutton.style.display = "none"
+        solverbutton.style.display = "block"
       }
-
-      //solverbutton.onclick = solve_cube();
-       
-      // else if(tempinput[out[0]][out[1]][out[2]]==6)
-      // {
-
-      // }
-      
-      // this.style.backgroundColor
-      // this.classList.toggle("Project-ActiveDropDownButton")
-      // var panel = this.nextElementSibling;
-      // var image = this.childNodes[5].childNodes[3].childNodes[1]
-      // if (panel.style.maxHeight) {
-      //     panel.style.maxHeight = null;
-      //     image.src = "images/pictures/dropdown/DdpDownOrange.png"
-      // } else {
-      //     panel.style.maxHeight = panel.scrollHeight + "px";
-      //     image.src = "images/pictures/dropdown/DdpUpLight.png"
-      // }
   })
 }
 
@@ -217,21 +142,23 @@ function checkinput()
   }
 }
 
-// NEWWWWWWWWWWWWWWWWWWWWWW Modal
 // get modal
 var modal = document.getElementById("Modal");
 
 //var btn = document.getElementById("Solver-Button-Wrapper");
 
 var span = document.getElementsByClassName("close")[0];
-var solveMovesArray = [];
-solverbutton.onclick = function() {
 
+// ---------------------------------------|
+var solveMovesArray = [];
+
+function SolvesCube()
+{
   const solver = require('rubiks-cube-solver');
-  console.log(tempinput);
   let cubeState = tempinput.join('').split(",").join("");
   cubeState = cubeState.replace(/0/g,'l').replace(/1/g,'d').replace(/2/g,'u').replace(/3/g,'r').replace(/4/g,'b').replace(/5/g,'f');
   console.log(cubeState);
+
   /*cubeState = [
     'flulfbddr', // front
     'rudrruddl', // right
@@ -240,23 +167,28 @@ solverbutton.onclick = function() {
     'rludlubrf', // left
     'lubfbfudl' // back
   ].join('');*/
+
+  // Temp
   cubeState = "ffdffdffdrrrrrrrrruufuufuufddbddbddblllllllllubbubbubb";
-  
+  // 
+
   let solveMoves = solver(cubeState).replace(/prime/g, '-');
-  for (let i = 0; i < solveMoves.length; i++) {
-    if (solveMoves[i] == '2') {
+  for (let i = 0; i < solveMoves.length; i++) 
+  {
+    if (solveMoves[i] == '2') 
+    {
       solveMoves = solveMoves.substring(0, i) + " " + solveMoves[i-1] + solveMoves.substring(i+1);
     }
   }
   solveMovesArray = solveMoves.split(' ')
-
-  console.log(solveMoves);
   console.log(solveMovesArray);
+}
+
+solverbutton.onclick = function() 
+{
+  SolvesCube()
   ShowStep(currstep)
-
   modal.style.display = "block";
-
-  
 }
 
 span.onclick = function() {
@@ -267,16 +199,13 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-
-
 }
-
 
 //var solution = ["R","U","B","D"]
 
 // display
 var currstep = 1
-var len = solveMovesArray.length
+
 
 function StepUp(n){
   ShowStep(currstep+=n)
@@ -284,11 +213,13 @@ function StepUp(n){
 
 //ffdffdffdrrrrrrrrruufuufuufddbddbddblllllllllubbubbubb
 
-function plusSlides(n) {
-  ShowStep(slideIndex += n);
-}
+// function plusSlides(n) {
+//   ShowStep(slideIndex += n);
+// }
 
 function ShowStep(i) {
+  let len = solveMovesArray.length
+
   var MGCollector = document.getElementsByClassName("Modal-Grid-Items");
   var MLeft = document.getElementById("mleft");
   var MRight = document.getElementById("mright");
@@ -301,6 +232,7 @@ function ShowStep(i) {
   else if (i<=1){currstep=1; i=1;MLeft.style.opacity=0}
   else {MRight.style.opacity=1; MLeft.style.opacity=1}
   var MCode = solveMovesArray[i-1]
+
 
   // steps
   text.textContent = currstep + "/" + len;
@@ -465,6 +397,3 @@ function ShowStep(i) {
   }
 
 }
-
-
-
