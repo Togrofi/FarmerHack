@@ -260,39 +260,39 @@ function ShowStep(i) {
 
   // cursed bit
   if (MCode === "R") {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[8].textContent = "↑";
     MGCollector[13].textContent = "↑";
     MGCollector[18].textContent = "↑";
   } else if (MCode === "R-") {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[8].textContent = "↓";
     MGCollector[13].textContent = "↓";
     MGCollector[18].textContent = "↓";
   } else if (MCode === "M") {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[7].textContent = "↑";
     MGCollector[12].textContent = "↑";
     MGCollector[17].textContent = "↑";
   } else if (MCode === "M-") {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[7].textContent = "↓";
     MGCollector[12].textContent = "↓";
     MGCollector[17].textContent = "↓";
   } else if (MCode === "L") {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[6].textContent = "↓";
     MGCollector[11].textContent = "↓";
     MGCollector[16].textContent = "↓";
   } else if (MCode === "L-") {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[6].textContent = "↑";
     MGCollector[11].textContent = "↑";
     MGCollector[16].textContent = "↑";
   }
   if (MCode === "F")
   {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[7].textContent = "→";
     MGCollector[11].textContent = "↑";
     MGCollector[13].textContent = "↓";
@@ -300,7 +300,7 @@ function ShowStep(i) {
   }
   if (MCode === "F-")
   {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[17].textContent = "→";
     MGCollector[13].textContent = "↑";
     MGCollector[11].textContent = "↓";
@@ -309,28 +309,28 @@ function ShowStep(i) {
 
   if (MCode === "U")
   {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[6].textContent = "←";
     MGCollector[7].textContent = "←";
     MGCollector[8].textContent = "←";
   }
   if (MCode === "U-")
   {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[6].textContent = "→";
     MGCollector[7].textContent = "→";
     MGCollector[8].textContent = "→";
   }
   if (MCode === "D")
   {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[16].textContent = "→";
     MGCollector[17].textContent = "→";
     MGCollector[18].textContent = "→";
   }
 
   if (MCode === "D-") {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[16].textContent = "←";
     MGCollector[17].textContent = "←";
     MGCollector[18].textContent = "←";
@@ -338,14 +338,14 @@ function ShowStep(i) {
 
   if (MCode === "E")
   {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[11].textContent = "→";
     MGCollector[12].textContent = "→";
     MGCollector[13].textContent = "→";
   }
 
   if (MCode === "E-") {
-    MGCollector[4].textContent = "0";
+    MGCollector[4].textContent = "L0";
     MGCollector[11].textContent = "←";
     MGCollector[12].textContent = "←";
     MGCollector[13].textContent = "←";
@@ -353,7 +353,7 @@ function ShowStep(i) {
 
   if (MCode === "B")
   {
-    MGCollector[4].textContent = "2";
+    MGCollector[4].textContent = "L2";
     MGCollector[1].textContent = "←";
     MGCollector[2].textContent = "←";
     MGCollector[3].textContent = "←";
@@ -367,7 +367,7 @@ function ShowStep(i) {
 
   if (MCode === "B-")
   {
-    MGCollector[4].textContent = "2";
+    MGCollector[4].textContent = "L2";
     MGCollector[1].textContent = "→";
     MGCollector[2].textContent = "→";
     MGCollector[3].textContent = "→";
@@ -380,7 +380,7 @@ function ShowStep(i) {
   }
   if (MCode === "S")
   {
-    MGCollector[4].textContent = "1";
+    MGCollector[4].textContent = "L1";
     MGCollector[1].textContent = "→";
     MGCollector[2].textContent = "→";
     MGCollector[3].textContent = "→";
@@ -393,7 +393,7 @@ function ShowStep(i) {
   }
   if (MCode === "S-")
   {
-    MGCollector[4].textContent = "1";
+    MGCollector[4].textContent = "L1";
     MGCollector[1].textContent = "←";
     MGCollector[2].textContent = "←";
     MGCollector[3].textContent = "←";
