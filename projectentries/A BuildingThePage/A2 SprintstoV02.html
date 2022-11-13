@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Project template</title>
+        <base href="../../">
+        <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="myscripts.js" defer></script>
+        
+        <!--link, links two documents together in a coding sense-->
+        <!--Code Snippets allow presets-->
+    </head>
+    <body>
+        <div class="TitleCard-Section">
+            <!-- Wrappers for the Title and also the Logo -->
+            <div class="TitleCard-Title">
+                <img src="images/Logos/TealPageTitle.png">
+            </div>
+            <div class="TitleCard-Logo">
+                <img src="images/beanlogos/MainLogo.png">
+            </div>
+        </div>
+        <!-- class="NavBar-Section" -->
+        <div class="NavBar-Section" id="NavBar-Section">
+            <div class="NavBar-ProjectNavBar-Container">
+                <div class="ProjectNavBar-Left-DummyContainer">
+                    <div class="NavBar-Button-Container">
+                        <div class="NavBar-Button-Wrapper NavBar-ActiveButton-Wrapper">
+                            <a href="projects.html" title="Home">#BuildingThePage</a>
+                        </div>
+                        <div class="ProjectNavBar-Title-Wrapper">
+                            A2 Code Sprints to Version 0.2
+                        </div>
+                    </div>
+                </div>
+                <div class="ProjectNavBar-Right-DummyContainer">
+                    <div class="NavBar-Button-Container">
+                        <!-- Next Button -->
+                        <div class="NavBar-Button-Wrapper">
+                            <a href="projectentries/A BuildingThePage/A1 Concepts.html" class="" title="Contact">Previous</a>
+                        </div>
+                        <!-- Home Button -->
+                        <div class="NavBar-Button-Wrapper NavBar-ActiveButton-Wrapper">
+                            <a href="Projects.html" title="Home">Back</a>
+                        </div>
+                        <!-- previous Button -->
+                        <div class="NavBar-Button-Wrapper">
+                            <a href="projects.html" class="" title="Projects" >Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="MainContent-Container">
+                <div class="ProjectPage-Title-Container">
+                    <div class="ProjectPage-Left-DummyContainer">
+                        <div class="Flex-Container">
+                            <div class="Entry-Title-Wrapper">Code Sprints to Version 0.2</div>
+                        </div>
+                    </div>
+                    <div class="ProjectPage-Right-DummyContainer">
+                        <div class="Flex-Container">
+                            <div class="Entry-Date-Wrapper">8/11/2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Content-Container">
+                    <div class="Entry-TextBody-Container">
+                        <p>
+                            With the design of the webpage now complete (in a single setting), all that’s “left” is to actually implement them in code. Whilst this might seem daunting at a glance, it wasn’t as bad as with the concept sketches from before, I have a decent idea of what needs to be done and roughly how to get them done. Trying to allow myself to build on momentum and also following the agile approach I split up the task into self-contained sections or sprints of work which know I can tackle each in single sittings of roughly 4 to 5 hours.
+                        </p>
+                        <h1>Sprint I</h1>
+                            <p>The first of these was to complete the navigation bar for the webpage. This was first as I knew I can capitalise on the progress done from the first “failed” attempt, by just making minor adjustments to the existing colour schemes and coding a basic structure. Knowing this is the case, I also wanted to add an “sticky” feature which would allow the navigation bar to stay at the top of the screen when scrolling. </p>
+                            <p>For this I consulted a very useful site <a href="https://www.w3schools.com/howto/">W3School</a>  with many examples code for various features. It turns out that, adaptations for many of these features would end up in the Version 0.2 of the site. That being said, although the code for the nav-bar is largely identical to the template, this still took a surprisingly long time… (you might find this a reoccurring theme : D ). That being said I think this is well justified as I wanted to understand the code at least on a basic level and be familiar with various syntaxes (having not used HTML, CSS nor JavaScript before), and I think paid off in the long term as you will find out! </p>
+                        <h1>Sprint II</h1>
+                            <p>Following on from the day before and feeling motivated form yesterday's progress, I proceed to focus on making a way to display the individual projects and their sub entry. In the original tutorial on <a href="https://www.youtube.com/watch?v=5bMdjkfvONE">Youtube</a> a grid format was used. However, I wanted something different as it’s I think the current drop down menu approach allow the progress of different project threads to be more clearly displayed. </p>
+                            <p> For this desired drop down effect, I decide to adapt the “acordian” feature from once again form <a href="https://www.w3schools.com/howto/howto_js_accordion.asp">W3School</a>. This was done by taking the "accordian" code and replacing the text with a simple sub-menu (which I'm getting quite familiar with at this point), and also custom grid box display instead of the button suggested</p>
+                            <p>To no one's surprise, this took an unexpectedly long amount time. Actually whilst most of it was quickly adapted, it is the very minor details like using a custom drop down arrow that would change both direction and colour which took like 90% of the time... But I think it is also where most of the learning is achieved, as I tried out my own code approahces </p>    
+                            <p>On a side note, I needed a way to have multiple project titles, and entries with the same displayes, but just slight differences in the titles. It is moments like these that you wish thtat there is more of an inheritance feature for  HTML classes. Whilst I'm sure there is probably a smart way (I'm guessing using JavaScript to automatically create these objects from a stored table) that I’m not aware of (inheritance definitely do in css and this is used later on), I've decied to leave this for future me to figure out, trying to focus on achiving a minimal viable product for now. I tackled this problem for now using custom coding snippets, but is still far from ideal... </p>
+                        <h1>Sprint III</h1>
+                            <p>Finally ending the week, I focused on working to create a template for individual blog entry and fixing a “bug” that I have noticed. I figured for the former, I can qickly adapt the existing nav-bar using CSS inheritance to show information about each entry and facilitate a user interface browsing through the entires. I did also considered using custom "arrow" shape for the "next" and "previous" buttons, but held off on it as I think it would take an exceeding long amount of time.
+                            <p>After that, The day then moved toward fixing the latter. The bug was an issue where the scrolling would cause the page to jump at the point of the sticky navbar kicks in. This was due to the template code form <a href="https://www.w3schools.com/howto/howto_js_navbar_sticky.asp">W3School</a> on the sticky nav-bar feature has some non-funcitonal code, and I had to spend some time trying to hobble together a solution using newly learnt JavaScript. This once again took a some time, but I Was quite happy with the final result and the slick end result</p>
+                            <p>finishing all the coding needed, an excited me, then joyeously begain to writing the content for all the pages; nievly typing away not realisaing of how much of a task this is ...just yet... but we can save this for another time </p>
+                        <h1>Final Takeway From Coding up Version 0.2</h1>
+                            <p>I think building this website really validated this agile approach to completing and learning from projects. Having these sections that I can finish within a sitting, meant that I can alway look back on and be satisfied from my progrss, and hence usually feel fairly motivated. </p>
+                            <p>Although this is not without its share of challenges, for example I definitely felt the lure to "mission creep", and incorporating some of the new features definitly always took a longer amount of time than expected. Also I felt much less motivated when I felt uncertain on how to approach a problem or lumping too much work in a single sprint. I guess these are the thing that I'll need to look out for but I'm definitely excited to try this method on more things in the future.</p>
+                            <p>Finally in term of the website itself, I think there is still many improvements that I can make in the future. I would like to add features like contact forms, a home page displaying the lates updates, and there may also reach a point to rewrite the entire website in a more profession way in the futre, but I guess this is good enough for now and I'm happy with the results seeing the progress made over 4-5 days, starting from not knowing anything about HTML and CSS at all!</p>
+                    </div>
+                        
+                </div>
+        </div>
+    </body>
+</html>

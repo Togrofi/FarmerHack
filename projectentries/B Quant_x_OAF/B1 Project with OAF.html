@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Project template</title>
+        <base href="../../">
+        <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="myscripts.js" defer></script>
+        
+        <!--link, links two documents together in a coding sense-->
+        <!--Code Snippets allow presets-->
+    </head>
+    <body>
+        <div class="TitleCard-Section">
+            <!-- Wrappers for the Title and also the Logo -->
+            <div class="TitleCard-Title">
+                <img src="images/Logos/TealPageTitle.png">
+            </div>
+            <div class="TitleCard-Logo">
+                <img src="images/beanlogos/MainLogo.png">
+            </div>
+        </div>
+        <!-- class="NavBar-Section" -->
+        <div class="NavBar-Section" id="NavBar-Section">
+            <div class="NavBar-ProjectNavBar-Container">
+                <div class="ProjectNavBar-Left-DummyContainer">
+                    <div class="NavBar-Button-Container">
+                        <div class="NavBar-Button-Wrapper NavBar-ActiveButton-Wrapper">
+                            <a href="projects.html" title="Home">#Qant x OAF</a>
+                        </div>
+                        <div class="ProjectNavBar-Title-Wrapper">
+                            B1 Project with OAF
+                        </div>
+                    </div>
+                </div>
+                <div class="ProjectNavBar-Right-DummyContainer">
+                    <div class="NavBar-Button-Container">
+                        <!-- Next Button -->
+                        <div class="NavBar-Button-Wrapper">
+                            <a href="Projects.html" class="" title="Contact">Previous</a>
+                        </div>
+                        <!-- Home Button -->
+                        <div class="NavBar-Button-Wrapper NavBar-ActiveButton-Wrapper">
+                            <a href="Projects.html" title="Home">Back</a>
+                        </div>
+                        <!-- previous Button -->
+                        <div class="NavBar-Button-Wrapper">
+                            <a href="projectentries/B Quant_x_OAF/B2 Validating Results.html" class="" title="Projects" >Next</a>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+
+        <div class="MainContent-Container">
+
+            <div class="ProjectPage-Title-Container">
+                <div class="ProjectPage-Left-DummyContainer">
+                    <div class="Flex-Container">
+                        <div class="Entry-Title-Wrapper">Project with OAF</div>
+                    </div>
+                </div>
+                <div class="ProjectPage-Right-DummyContainer">
+                    <div class="Flex-Container">
+                        <div class="Entry-Date-Wrapper">8/11/2022</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Content-Container">
+                <div class="Entry-TextBody-Container">
+                    <h1>Background</h1>
+                        <p>So a while back I was involved in a research project with the Oxford Alpha Fund’s Quant Division. This included collecting and formulating data, conducting experiments, as well as writing up a report in an academic paper format. This was also during term time so do keep in mind that these projects do have a limited scale and scope.</p>
+                        <p>I was on a team dealing with the Earning Accountment Premium (EAP), a phenomenon where well studied phenomena where a premium of sometimes up to 16% of certain stocks’ annual returns can be observed around a 2-day period around an announcement. Within this I was responsible for the investigating machine learning strategies.</p>
+                    <h1>The Approach</h1>
+                        <p>But before all of these some basics needs to be done, namely collecting the data and formatting it. To do so, I had spent a few solid hours sitting in front of the universities Bloomberg terminal, downloading the data as csv files. Then to process the data, made some formatting function that could work on all the data into the desired format by passing the all through a dictionary. Finally to finish things off some of the machine learning features like returns can needs to be calculated, and splitting things into a training and testing dataset. </p>
+                        <p>With a functioning data set, let’s talk machine learning. First thing first, it’s is nothing too fancy, simple semi-deep neural network in supervised learning with ReLu activation. This has to be this way with the limited time scope of the project, and hence using Scikit-Learn… as the old saying goes, there’s no point reinventing the wheel (with pytorch or tensor flow in this case). In terms of the features to learn, it was at first just having a play around and seeing the results which was unsurprisingly nothing too great… this is understandable as with a small and arbitrary set of features are likely to either under describe the underlying model or find false correlations. </p>
+                        <p>In a conversation with my project team leader encouraged me to think about the value of the research that is done. With this I realised that machine learning allowed us to take a “theory agonistic” approach. To explain on the concept, the literature surrounding the EAP proposes different and sometimes competing theories with their respective indicative factors for this phenomenon. Machine learning can then use a combination of these indicative factors as features from different school of thoughts, to learn a “predictive” mapping. Basically, allowing us to combine good priors from different sources. I then experimented with different feature sets inspire by the literature and observed the results. (we will discuss the issues of the approach taken later, so hold your horses haha…)</p>
+                        <p>This was then back tested to the testing data set with not bad results for a monthly stratergy of a <b>Sharpe of 1.82, Mean Annual Returns of 30.2%, and Max Draw Down of 15%</b> compaired to the an evenly weigted S&P 500 Index performance of Sharpe 0.97, Mean Annual Returns of 13.9% and Max Draw Down of 27% over the same period.</p>
+                    <h1>The Issues</h1>
+                        <p> As mentioned before this approach is not without its issues. Namely the risk of introducing hind sight and concerns over unquantified risks. As you might have spotted already, we experimented with different data-sets, backt-tested them to find the best strategy. However this is equivalent to manually selecting the best features and creates a risk of introducing hindsight in when implementing this strategy in the future. moreover, we have also discovered some unquantified risks when analyising our stratergy data. We have found that there is little correlation between the predicted and actual portfolio returns. This combined with often large portfolio weighting into certain individual stocks creates a risk that is not well quantified by our performance measurement metrics alone. There is also feedback from our sponsors that we need to be more aware the risk exposures of our strategy to certain risk premiums, and the presence of relatively high max draw-downs. </p>
+                        <p> in the next entry, We’ll discuss what is done to address these issues so do look-forward to it!</p>
+                        <p><b>Find the full projcet report <a href="https://github.com/GreenGranite/Public-Stuff/blob/main/OAF/OAF_HT22_ADAY_ML.pdf">Here</a>, and the code used in the project <a href="">Here!</a></b></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

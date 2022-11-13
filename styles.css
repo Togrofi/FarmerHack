@@ -1,0 +1,485 @@
+/*master styles*/
+body {
+    margin: 0px;
+    font-family: century-gothic, sans-serif;
+    --DarkTeal: #4400aaff;
+    --SharpOrange: #ff6600ff;
+    --LightOffWhite: #fcfbf5ff;
+    --TitleCardHeight: 150px;
+    --ProjectButtonHeight: 120px;
+    --NavBarHeight:1.2cm;
+    --HomeHeight: 10cm;
+
+    --EntryTitleHeight: 1.5cm;
+    color: var(--DarkTeal);
+}
+
+
+
+/*  TitleCard Styling */
+    
+    .TitleCard-Section{
+        width: 100%;
+        height: var(--TitleCardHeight);
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .TitleCard-Title{
+        width: fit-content;
+    }
+
+    .TitleCard-Title img{
+        height: var(--TitleCardHeight);
+        width: 100%;
+        object-fit:scale-down
+        
+    }
+
+    .TitleCard-Logo{
+        height: var(--TitleCardHeight);
+        width: fit-content;
+    }
+
+    .TitleCard-Logo img{
+        height: 100%; 
+        /* padding-top: 40%; */
+        width: 100%;
+        object-fit: scale-down;
+    }
+    /* .TitleCard-Wrapper{
+    } */
+
+/* NavBar Styling */
+    .NavBar-Section{
+        height: var(--NavBarHeight);
+        width: 100%;
+        background-color: var(--DarkTeal);
+        align-items: center;
+        display: flex;
+    }
+
+    .NavBar-Button-Container{
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+    }
+
+    .NavBar-Button-Wrapper{
+        /* temporary sizes */
+        margin-left: 10px;
+        margin-right: 10px;
+        /* width: 2cm; */
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+
+        /* Styling */
+        font-size: 0.9em;
+        /* text-transform: uppercase; */
+        background-color: var(--DarkTeal);
+        transition-property: background-color;
+        transition: all 1s;
+        text-align: center;
+
+    }
+
+    .NavBar-Button-Wrapper a{
+        color:     var(--LightOffWhite);
+        text-decoration: none;
+        font-weight: normal;
+        transition: all 1s;
+        
+        transition-property: color;
+    }
+
+    /* Hover Over Buttons */
+
+        .NavBar-Button-Wrapper:hover{
+            background-color: var(--SharpOrange);
+        }
+
+        .NavBar-Button-Wrapper:hover a{
+            font-weight: bolder;
+        }
+
+        .NavBar-Button-Wrapper a::before {
+            display: flex;
+            content: attr(title);
+            font-weight: bold;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+    /* Active Link */
+        .NavBar-ActiveButton-Wrapper{
+            background-color: var(--SharpOrange) !important;
+        }
+
+        .NavBar-ActiveButton-Wrapper a{
+            font-weight: bold !important;
+        }
+    
+    /* Sticky Behaviours */
+        /* Using Code Template from W3 School */
+        .NavBar-StickyPadding {
+            padding: 16px;
+        }
+        /* unclear how this works */
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .NavBar-StickyNavBar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .NavBar-StickyNavBar + .NavBar-StickyPadding {
+            padding-top: 100cm;
+        }
+        /* unclear how this works */
+
+    /* NavBar for Porject Pages */
+        .NavBar-ProjectNavBar-Container {
+            height: var(--NavBarHeight);
+            width: 100%;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            align-items: center;
+        }
+        .ProjectNavBar-Left-DummyContainer .NavBar-Button-Container {
+            justify-content: left;
+        }
+
+        .ProjectNavBar-Right-DummyContainer .NavBar-Button-Container {
+            justify-content: right;
+            padding-left: 0px;
+            padding-right: 30px;
+        }
+
+        .ProjectNavBar-Title-Wrapper{
+            color: var(--LightOffWhite);
+            font-weight: bolder;
+        }
+
+        .ProjectNavBar-Title-Wrapper::before{
+            content: ":";
+        }
+
+
+        .ProjectNavBar-Right-DummyContainer .NavBar-Button-Wrapper:hover {
+            background-color: var(--LightOffWhite);
+        }
+
+        .ProjectNavBar-Right-DummyContainer .NavBar-Button-Wrapper:hover a{
+            color: var(--DarkTeal);
+        }
+
+        .ProjectNavBar-Right-DummyContainer .NavBar-ActiveButton-Wrapper a {
+            color: var(--LightOffWhite) !important;
+        }
+
+
+    
+
+/* Project Styling */
+    /* Project Button Styling */
+        .Main-Section{
+            font-family: century-gothic, sans-serif;
+        }
+
+        .Main-Section-Sticky {
+            margin-top: 1.2cm ;
+        }
+
+        .Projcet-DropDownButton {
+            height: var(--ProjectButtonHeight);
+            width: 100%;
+            display:grid;
+
+            grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
+
+            background-color:     var(--LightOffWhite);
+            font-size: xx-large;
+            font-weight: bolder;
+            color: var(--DarkTeal);
+            text-align: center;
+            justify-content: center;
+
+            transition: 1s;
+        }
+
+        .Project-DropDownButton-LogoSpace img{
+            height: var(--ProjectButtonHeight);
+            width: 100%;
+            object-fit: scale-down;
+        }
+
+        .Project-DropDownButton-Title{
+            height: var(--ProjectButtonHeight);
+            display: grid;
+            grid-template-rows: 3fr 1fr;        
+            vertical-align:middle;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .Project-DropDownButton-Title-Text{
+            padding: 20px;
+
+        }
+        .Project-DropDownButton-Title-Arrow img{
+            height: 10px;
+            width: 100%;
+            padding-bottom: 20px;
+            object-fit:contain;
+            transition: 1s;
+        }
+
+        
+
+        /* Dropdown Button Hover Styles */
+            .Projcet-DropDownButton:hover {
+                background-color: var(--SharpOrange);
+                color:     var(--LightOffWhite);
+            }
+
+            .Projcet-DropDownButton:hover .Project-DropDownButton-Title-Arrow img{
+                filter: brightness(0) invert(1);
+            }
+
+        /* Active Button Styles */
+            .Project-ActiveDropDownButton {
+                background-color: var(--SharpOrange);
+                color:     var(--LightOffWhite);
+            }
+
+
+    /* Project SubMenu Objects */
+        .Project-SubMenu-Wrapper{
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .Project-SubMenu-Entry-Wrapper {
+            display: grid;
+            grid-template-columns: 1fr ;
+            width: 100%;
+            transition-property: background-color;
+            transition: all 1s;
+            margin: 0.5cm;
+        }        
+            
+
+        .Project-SubMenu-Entry-Wrapper a{
+            padding: 10px;
+            font-size: 0.5cm;
+            justify-content: center;
+            text-align: center;
+            color: var(--DarkTeal);
+            text-decoration: none;
+            background-color: white;
+            transition-property: background-color;
+            transition: all 1s;
+        }
+
+        .Project-SubMenu-Entry-Wrapper a:hover{
+            filter: brightness(0.95);
+        }
+
+/* Entry-Page */
+    /* Entry Title Styles */
+        .ProjectPage-Title-Container{
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+        }
+
+        .Flex-Container{
+            padding: 30px;
+        }
+        
+        
+
+        .ProjectPage-Right-DummyContainer .Flex-Container {
+            display: flex;
+            justify-content: right;
+            align-items: flex-end;
+            height: var(--EntryTitleHeight);
+        }
+
+        .ProjectPage-Right-DummyContainer .Flex-Container::before {
+            content: "Date :";
+            padding-right: 10px;
+            
+        }
+     
+
+        .Entry-Title-Wrapper{
+            font-weight: bolder;
+            font-size: var(--EntryTitleHeight);
+        }
+
+   
+/* Rubics Cube Styles */
+    /* Grid Styles */
+        .Project-Grid-DummyContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Grid-Container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            height: 6cm;
+            width: 6cm;
+        }
+        .Grid-Item{
+            height:1cm;
+            width: 1cm;
+            background-color: gray;
+            padding: 15px;
+        }
+        .Solver-Button{
+            color: var(--LightOffWhite);
+        }
+
+
+        .White{
+            background-color: var(--LightOffWhite) !important;
+        }
+
+        .Blue{
+            background-color: Blue !important;
+        }
+
+        .Green{
+            background-color: Green !important;
+        }
+
+        .Red{
+            background-color: Red !important;
+        }
+        
+        .Orange{
+            background-color: orange !important;
+        }
+
+        .Yellow{
+            background-color: Yellow !important;
+        }
+
+        /* Modal */
+
+            .Modal-OuterContainer{
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4);
+            }
+
+            .Modal-Container{
+                background-color: #fefefe;
+                margin:15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                height: 20cm;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            }
+
+
+            .Modal-Wrapper{
+                display: grid;
+                grid-template-columns: 1fr 7fr 1fr;
+                height: 80%; 
+            }
+
+            .Modal-DummyContainer{
+                display: grid;
+                grid-template-rows: 5fr 2fr 1fr;
+            }
+
+            .Modal-Grid-DummyContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Modal-Grid-Container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+                grid-template-rows: 1fr 1fr 1fr 1fr  ;
+            }
+            .Modal-Grid-ItemsDummy{
+                margin:10px;
+                background-color: lightgray;
+                height: 2cm;
+                width: 2cm;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .Modal-Grid-Items{
+                font-size: 1cm;
+            }
+
+
+            .Modal-Botton-StringContainer {
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Modal-Action-DummyContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Modal-Action{
+                font-size: 3.5cm;
+            }
+
+         
+
+            .Modal-Button-Wrapper{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2cm;
+            }
+
+            .XWhite{
+                background-color: white !important;
+            }
+
+            .alttext{
+                color:var(--SharpOrange);
+            }

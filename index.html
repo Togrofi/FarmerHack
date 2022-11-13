@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Page Title</title>
+        <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="bundle.js" defer></script>
+        
+        <!--link, links two documents together in a coding sense-->
+        <!--Code Snippets allow presets-->
+    </head>
+    <body>
+        <div class="TitleCard-Section">
+            <!-- Wrappers for the Title and also the Logo -->
+            <div class="TitleCard-Title">
+                <img src="images/Logos/RubicsSolverTitle.png">
+            </div>
+            <div class="TitleCard-Logo">
+                <img src="images/Logos/CubeLogo.png">
+            </div>
+        </div>
+        
+        <div class="NavBar-Section" id="NavBar-Section">
+            <div class="NavBar-Button-Container">
+                <div class="NavBar-Button-Wrapper NavBar-ActiveButton-Wrapper">
+                    <a href="index.html" title="Home">Input Cube</a>
+                </div>
+                <div class="NavBar-Button-Wrapper">
+                    <a href="index.html" class="" title="">Reset</a>
+                </div>
+                <div class="NavBar-Button-Wrapper" id= "Solver-Button-Wrapper">
+                    <a class="Solver-Button" title="Solve" >Solve</a>
+                </div>
+                <div class="Modal-OuterContainer" id="Modal">
+                    <div class="Modal-Container">
+                        <span class = "close">&times;</span>
+                        <div class="Modal-Wrapper">
+                            <div class="Modal-Button-Wrapper" onclick="StepUp(-1)">
+                                <div class="Modal-Button-Left" id="mleft">&#10094;</div>
+                            </div>
+                            <div class="Modal-DummyContainer">
+                                <div class="Modal-Grid-DummyContainer">
+                                    <div class="Modal-Grid-Container">
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite alttext">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy" id="mbgc">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                        <div class="Modal-Grid-ItemsDummy XWhite">
+                                            <div class="Modal-Grid-Items"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Modal-Action-DummyContainer" >
+                                    <div class="Modal-Action" id="action"></div>
+                                </div>
+                                <div class="Modal-Botton-StringContainer" id="text">
+                                </div>
+                            </div>
+                            <div class="Modal-Button-Wrapper" onclick="StepUp(1)">
+                                <div class="Modal-Button-Right" id="mright">&#10095;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div class="Main-Section">
+            <div class="Project-Container">
+
+                <!-- Build the Website Project -->
+                <!-- The Button-Wrapper That creates a dropdown Menu -->
+                <div class="Projcet-DropDownButton">
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-Title">
+                        <div class="Project-DropDownButton-Title-Text">White Face (Green on Top)</div>
+                        <div class="Project-DropDownButton-Title-Arrow">
+                            <img src="images/pictures/dropdown/DdpDownOrange.png">
+                        </div>
+                    </div>
+                    <div class="Project-DropDownButton-LogoSpace">
+                    </div>
+                    <div class="Porject-DropdownButton-LogoSpace"></div>
+                </div>
+                <!-- The Subcontainer that contain each sub menu  -->
+                <div class="Project-SubMenu-Wrapper">
+                    <div class="Project-SubMenu-Entry-Wrapper">
+                        <div class="Project-Grid-DummyContainer">
+                            <div class="Grid-Container">
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item White"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quant / OAF Project -->
+                <!-- The Button-Wrapper That creates a dropdown Menu -->
+                <div class="Projcet-DropDownButton">
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-LogoSpace">
+                    </div>
+                    <div class="Project-DropDownButton-Title">
+                        <div class="Project-DropDownButton-Title-Text">Orange Face</div>
+                        <div class="Project-DropDownButton-Title-Arrow">
+                            <img src="images/pictures/dropdown/DdpDownOrange.png">
+                        </div>
+                    </div>
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Porject-DropdownButton-LogoSpace"></div>
+                </div>
+                <!-- The Subcontainer that contain each sub menu  -->
+                <div class="Project-SubMenu-Wrapper">
+                    <div class="Project-SubMenu-Entry-Wrapper">
+                        <div class="Project-Grid-DummyContainer">
+                            <div class="Grid-Container">
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item Orange"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Projects/ Blogs -->
+                <!-- The Button-Wrapper That creates a dropdown Menu -->
+                <div class="Projcet-DropDownButton">
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-Title">
+                        <div class="Project-DropDownButton-Title-Text">Green Face</div>
+                        <div class="Project-DropDownButton-Title-Arrow">
+                            <img src="images/pictures/dropdown/DdpDownOrange.png">
+                        </div>
+                    </div>
+                    <div class="Project-DropDownButton-LogoSpace">
+                    </div>
+                    <div class="Porject-DropdownButton-LogoSpace"></div>
+                </div>
+                <!-- The Subcontainer that contain each sub menu  -->
+                <div class="Project-SubMenu-Wrapper">
+                    <div class="Project-SubMenu-Entry-Wrapper">
+                        <div class="Project-Grid-DummyContainer">
+                            <div class="Grid-Container">
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item Green"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- The Button-Wrapper That creates a dropdown Menu -->
+                <div class="Projcet-DropDownButton">
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-Title">
+                        <div class="Project-DropDownButton-Title-Text">Blue Face</div>
+                        <div class="Project-DropDownButton-Title-Arrow">
+                            <img src="images/pictures/dropdown/DdpDownOrange.png">
+                        </div>
+                    </div>
+                    <div class="Project-DropDownButton-LogoSpace">
+                    </div>
+                    <div class="Porject-DropdownButton-LogoSpace"></div>
+                </div>
+                <!-- The Subcontainer that contain each sub menu  -->
+                <div class="Project-SubMenu-Wrapper">
+                    <div class="Project-SubMenu-Entry-Wrapper">
+                        <div class="Project-Grid-DummyContainer">
+                            <div class="Grid-Container">
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item Blue"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- The Button-Wrapper That creates a dropdown Menu -->
+                <div class="Projcet-DropDownButton">
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-Title">
+                        <div class="Project-DropDownButton-Title-Text">Red Face</div>
+                        <div class="Project-DropDownButton-Title-Arrow">
+                            <img src="images/pictures/dropdown/DdpDownOrange.png">
+                        </div>
+                    </div>
+                    <div class="Project-DropDownButton-LogoSpace">
+                    </div>
+                    <div class="Porject-DropdownButton-LogoSpace"></div>
+                </div>
+                <!-- The Subcontainer that contain each sub menu  -->
+                <div class="Project-SubMenu-Wrapper">
+                    <div class="Project-SubMenu-Entry-Wrapper">
+                        <div class="Project-Grid-DummyContainer">
+                            <div class="Grid-Container">
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item Red"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Button-Wrapper That creates a dropdown Menu -->
+                <div class="Projcet-DropDownButton">
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-LogoSpace"></div>
+                    <div class="Project-DropDownButton-Title">
+                        <div class="Project-DropDownButton-Title-Text">Yellow Face</div>
+                        <div class="Project-DropDownButton-Title-Arrow">
+                            <img src="images/pictures/dropdown/DdpDownOrange.png">
+                        </div>
+                    </div>
+                    <div class="Project-DropDownButton-LogoSpace">
+                    </div>
+                    <div class="Porject-DropdownButton-LogoSpace"></div>
+                </div>
+                <!-- The Subcontainer that contain each sub menu  -->
+                <div class="Project-SubMenu-Wrapper">
+                    <div class="Project-SubMenu-Entry-Wrapper">
+                        <div class="Project-Grid-DummyContainer">
+                            <div class="Grid-Container">
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item Yellow"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                                <div class="Grid-Item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
